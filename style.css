@@ -1,0 +1,213 @@
+body{
+    margin: 0px;
+}
+header{
+    display: flex;
+    top: 0;
+    width: 100%;
+    background-color: #c59e7a;
+    justify-content: center;
+    position: fixed;
+}
+nav{
+    padding: 10px;
+}
+nav a{
+    padding: 10px 25px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+nav a:hover{
+color: rgba(255, 255, 255, 0.815);
+background-color: #bd8e61;
+transition: 0.4s;
+font-size: 20px;
+}
+section.Home{
+    height: 800px;
+    background: url("Image1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 600px;
+    padding-top: 250px;
+    text-align:center;
+}
+section.About{
+height: 800px;
+background-color: #b4885f;
+color: #b4885f00;
+}
+section.product{
+    background: url("Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 250px;
+    height: 600px
+    }
+    section.product .container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    }
+    section.product .container .card1{
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    width:200px;
+    height: 400px;
+    margin: 15px;
+    border-radius: 8px;
+    }
+    section.product .container .card1 img{
+    width:100%;
+    } 
+    section.product .container .card1 a{
+        display: inline-block;
+        background-color: #c59e7a;
+        color: white;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 50px;
+        margin-top: auto;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        font-weight: bold;
+
+    }
+    section.product{
+    background-color: #e5b384;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1200px;
+    }
+    section.product .container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    }
+    section.product .container .card2{
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    width:200px;
+    height: 400px;
+    margin: 15px;
+    border-radius: 8px;
+    justify-content: space-between;
+    }
+    section.product .container .card2 img {
+        width:100%;
+    }
+    section.product .container .card2 a{
+        display: inline-block;
+        background-color: #c59e7a;
+        color: rgb(255, 255, 255);
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 50px;
+        margin-top: auto;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        font-weight: bold;
+    }
+section.product{
+background-color: #e5b384;
+background-size: cover;
+background-repeat: no-repeat;
+height: 1200px;
+}
+section.product .container {
+justify-content: center;
+display: flex;
+flex-wrap: wrap;
+padding-top: 40px;
+}
+section.product .container .card3{
+background-color: white;
+text-align: center;
+padding: 5px;
+width:200px;
+height: 400px;
+margin: 15px;
+border-radius: 8px;
+justify-content: space-between;
+}
+section.product .container .card3 img {
+    width:100%;
+}
+section.product .container .card3 a{
+    display: inline-block;
+    background-color: #c59e7a;
+    color: rgb(255, 255, 255);
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: auto;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+section.product{
+    background-color: #e5b384;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1200px;
+    }
+    section.product .container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    }
+    section.product .container .card4{
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    width:200px;
+    height: 400px;
+    margin: 15px;
+    border-radius: 8px;
+    justify-content: space-between;
+    }
+    section.product .container .card4 img {
+        width:100%;
+    }
+    section.product .container .card4 a{
+        display: inline-block;
+        background-color: #c59e7a;
+        color: rgb(255, 255, 255);
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 50px;
+        margin-top: auto;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+        font-weight: bold;
+    }
+    
+section.Contact{
+    height: 800px;
+    background-color:#b4885f;
+    color: #b4885f00;
+    }
+.footer{
+    height: 100px;
+    background-color: black;
+}
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 150px;
+    color:rgb(254, 254, 254); 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
