@@ -9,41 +9,121 @@ header{
     justify-content: center;
     position: fixed;
 }
-nav{
-    padding: 10px;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    background-color: #c59e7a;
+    width: 100%;
 }
-nav a{
-    padding: 10px 25px;
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.pinewine {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+
+nav a {
+    display: inline-block;  
+    padding: 10px 20px;     
     text-decoration: none;
     color: rgb(255, 255, 255);
+    transition: 0.4s;
+    font-size: 18px;
+    width: auto;            
+    height: 100%;          
+    text-align: center;     
 }
-nav a:hover{
-color: rgba(255, 255, 255, 0.815);
-background-color: #bd8e61;
-transition: 0.4s;
-font-size: 20px;
+
+nav a:hover {
+    color: rgba(255, 255, 255, 0.815);
+    background-color: #bd8e61;
+    font-size: 20px;
 }
-section.Home{
-    height: 800px;
+.Home{
+    height: 700px;
     background: url("Image1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 600px;
     padding-top: 250px;
     text-align:center;
 }
-section.About{
+section.Home a {
+    background-color: #b4885f;
+    color:   #ffffff;;
+    padding: 10px 20px;
+    text-decoration: none;
+    box-shadow: 0px 0px 3px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 30px; 
+}
+
+section.Home div{
+    text-align: center;
+    color: white;
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+}
+section.Home .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+section.Home .column {
+    flex: 1 1 300px;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+section.Home .column h2 {
+    margin-bottom: 10px;
+}
+
+section.Home .column p {
+    line-height: 1.6;
+}
+section.about{
 height: 800px;
 background-color: #b4885f;
-color: #b4885f00;
+padding-top: 100px;
+}
+section.about div{
+   color: white;
+   text-align: center;
+   margin: auto;
+   width: 70%;
+}
+section.about img{
+    height: 200px;
 }
 section.product{
     background: url("Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-top: 250px;
+    padding-top: 100px;
     height: 600px
     }
     section.product .container {
@@ -52,19 +132,20 @@ section.product{
     flex-wrap: wrap;
     padding-top: 50px;
     }
-    section.product .container .card1{
+    section.product .container .card{
     background-color: white;
     text-align: center;
     padding: 5px;
     width:200px;
-    height: 400px;
+    height: 450px;
     margin: 15px;
     border-radius: 8px;
+    justify-content: space-between;
     }
-    section.product .container .card1 img{
+    section.product .container .card img{
     width:100%;
     } 
-    section.product .container .card1 a{
+    section.product .container .card a{
         display: inline-block;
         background-color: #c59e7a;
         color: white;
@@ -80,7 +161,7 @@ section.product{
     background-color: #e5b384;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1200px;
+    height: 200px;
     }
     section.product .container {
     justify-content: center;
@@ -88,20 +169,20 @@ section.product{
     flex-wrap: wrap;
     padding-top: 40px;
     }
-    section.product .container .card2{
+    section.product .container .card{
     background-color: white;
     text-align: center;
     padding: 5px;
     width:200px;
-    height: 400px;
+    height: 450px;
     margin: 15px;
     border-radius: 8px;
     justify-content: space-between;
     }
-    section.product .container .card2 img {
+    section.product .container .card img {
         width:100%;
     }
-    section.product .container .card2 a{
+    section.product .container .card a{
         display: inline-block;
         background-color: #c59e7a;
         color: rgb(255, 255, 255);
@@ -111,6 +192,28 @@ section.product{
         margin-top: auto;
         box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
         font-weight: bold;
+    }
+    section.product .container .card:hover {
+        animation: goyang 0.5s;
+        box-shadow: 0 0 5px rgb(0, 0, 0);
+    }
+    
+    @keyframes goyang {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(3deg);
+        }
+        50% {
+            transform: rotate(-3deg);
+        }
+        75% {
+            transform: rotate(1deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
     }
 section.product{
 background-color: #e5b384;
@@ -124,20 +227,20 @@ display: flex;
 flex-wrap: wrap;
 padding-top: 40px;
 }
-section.product .container .card3{
+section.product .container .card{
 background-color: white;
 text-align: center;
 padding: 5px;
 width:200px;
-height: 400px;
+height: 450px;
 margin: 15px;
 border-radius: 8px;
 justify-content: space-between;
 }
-section.product .container .card3 img {
+section.product .container .card img {
     width:100%;
 }
-section.product .container .card3 a{
+section.product .container .card a{
     display: inline-block;
     background-color: #c59e7a;
     color: rgb(255, 255, 255);
@@ -160,20 +263,20 @@ section.product{
     flex-wrap: wrap;
     padding-top: 40px;
     }
-    section.product .container .card4{
+    section.product .container .card{
     background-color: white;
     text-align: center;
     padding: 5px;
     width:200px;
-    height: 400px;
+    height: 450px;
     margin: 15px;
     border-radius: 8px;
     justify-content: space-between;
     }
-    section.product .container .card4 img {
+    section.product .container .card img {
         width:100%;
     }
-    section.product .container .card4 a{
+    section.product .container .card a{
         display: inline-block;
         background-color: #c59e7a;
         color: rgb(255, 255, 255);
@@ -184,20 +287,129 @@ section.product{
         box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
         font-weight: bold;
     }
-    
-section.Contact{
-    height: 800px;
-    background-color:#b4885f;
+    section.product{
+        background-color: #e5b384;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 1200px;
+        }
+        section.product .container {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 40px;
+        }
+        section.product .container .card{
+        background-color: white;
+        text-align: center;
+        padding: 5px;
+        width:200px;
+        height: 450px;
+        margin: 15px;
+        border-radius: 8px;
+        justify-content: space-between;
+        }
+        section.product .container .card img {
+            width:100%;
+        }
+        section.product .container .card a{
+            display: inline-block;
+            background-color: #c59e7a;
+            color: rgb(255, 255, 255);
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: auto;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+            font-weight: bold;
+        }
+        section.product{
+            background-color: #e5b384;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 1200px;
+            }
+            section.product .container {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 40px;
+            }
+            section.product .container .card{
+            background-color: white;
+            text-align: center;
+            padding: 5px;
+            width:200px;
+            height: 450px;
+            margin: 15px;
+            border-radius: 8px;
+            justify-content: space-between;
+            }
+            section.product .container .card img {
+                width:100%;
+            }
+            section.product .container .card a{
+                display: inline-block;
+                background-color: #c59e7a;
+                color: rgb(255, 255, 255);
+                padding: 10px 25px;
+                text-decoration: none;
+                border-radius: 50px;
+                margin-top: auto;
+                box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+                font-weight: bold;
+            }
+section.contact{
+    background-color:#b4885f00;
     color: #b4885f00;
     }
-.footer{
-    height: 100px;
-    background-color: black;
+    section.contact .card{
+margin: auto;
+color: rgba(176, 139, 139, 0);
+text-align: center;
+padding-top: 100px;
+width: 400px;
+    }
+   footer{
+    position: fixed;
+    background-color:#c59e7a;
+    height:34px;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+}
+footer .medsos{
+    text-align: center;
+    padding-top: 5px;
+}
+footer .medsos a{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 5px 10px;
+}
+footer .medsos a:hover {
+    background-color:#facca1;
+    color: rgb(0, 0, 0);
 }
 * {
     box-sizing: border-box;
 }
-
+section.contact .card img{
+    width: 500px;
+}
+section.contact{
+    height: 700px;
+    background-color: #b4885f;
+    padding-top: 100px;
+    }
+    section.contact div{
+        color: white;
+        text-align: center;
+        margin: auto;
+        width: 120%;
+     }
+    
 .column {
     float: left;
     width: 100%;
@@ -210,4 +422,12 @@ section.Contact{
     content: "";
     display: table;
     clear: both;
+}
+section.contact .card{
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    width: 400px;
+    font-size: 20px;
 }
